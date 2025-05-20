@@ -1,3 +1,8 @@
 file to send comments
 From tim to joe Waterfall : There seems to be a typo for maternive instead of maintenance and though instead of through,
 Instead of using an array for 100 users we should use a database for that.
+
+
+From Joe To Luis:
+I appreciate the detail you went into for models, It gives a clear idea of what we should be doing for this project, 
+The models are hard to read however and might need some format changing to be able to see better
