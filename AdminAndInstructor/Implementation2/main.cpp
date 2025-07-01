@@ -1,0 +1,83 @@
+#include <iostream>
+#include "ADMIN.h"
+#include <string>
+#include <sqlite3.h>
+#include <stdio.h>
+#include <iostream>
+
+#include <sqlite3.h>
+#include "../Implementation2/INSTRUCTOR.h"
+
+int main() {
+    sqlite3* db;
+    int rc = sqlite3_open("assignment3.db", &db);
+    if (rc) {
+        std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
+        return 1;
+    }
+
+    std::cout << "Opened database successfully.\n";
+    int choice;
+    std::cout << "Login as:\n1. Admin\n2. Instructor\nChoice: ";
+    std::cin >> choice;
+
+    if (choice == 1) {
+        ADMIN admin(db);
+        admin.menu();
+    }
+    else if (choice == 2) {
+        std::string id;
+        std::cout << "Enter Instructor ID: ";
+        std::cin >> id;
+        INSTRUCTOR instructor(db, id);
+        instructor.menu();
+    }
+    else {
+        std::cout << "Invalid choice.\n";
+    }
+
+    sqlite3_close(db);
+    return 0;
+}
+
+
+//static int callback(void* data, int argc, char** argv, char** azColName)
+//{
+//    int i;
+//    for (i = 0; i < argc; i++)
+//    {
+//        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+//    }
+//    printf("\n");
+//    return 0;
+//}
+//
+//// this is used for the main file where we will call all of our classes and objects
+//int main() {
+//
+//    sqlite3* db;
+//
+//    // Open the database
+//    int rc = sqlite3_open("assignment3.db", &db);
+//    if (rc) {
+//        std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
+//        return 1;
+//    } else {
+//        std::cout << "Opened database successfully.\n";
+//    }
+//
+//    // Create ADMIN object and run menu
+//    ADMIN admin(db);
+//    admin.menu();
+//
+//    // Close the database connection
+//    sqlite3_close(db);
+//    std::cout << "Database closed.\n";
+//
+//    return 0;
+//}
+//
+//// TIP See CLion help at <a
+//// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
+////  Also, you can try interactive lessons for CLion by selecting
+////  'Help | Learn IDE Features' from the main menu.
