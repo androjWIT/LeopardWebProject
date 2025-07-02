@@ -1,10 +1,14 @@
 #include "INSTRUCTOR.h"
 #include <iostream>
 
+// Code By Joseph Andro 
+
 INSTRUCTOR::INSTRUCTOR(sqlite3* db, const std::string& id) {
     this->db = db;
     this->instructorID = id;
 }
+
+// Instructor Menu:
 
 void INSTRUCTOR::menu() {
     int input;
@@ -26,6 +30,8 @@ void INSTRUCTOR::menu() {
     }
 }
 
+// Funcion to search for courses in DB
+
 void INSTRUCTOR::searchCourse() {
     std::string sql = "SELECT * FROM COURSE WHERE InstructorID = ?";
     sqlite3_stmt* stmt;
@@ -41,6 +47,8 @@ void INSTRUCTOR::searchCourse() {
 
     sqlite3_finalize(stmt);
 }
+
+// Fucntion to search for courses with parameters
 
 void INSTRUCTOR::searchCourseParam() {
     int choice;
@@ -73,6 +81,8 @@ void INSTRUCTOR::searchCourseParam() {
     sqlite3_finalize(stmt);
 }
 
+// Print Schedule Function
+
 void INSTRUCTOR::printSchedule() {
     std::string sql = "SELECT CRN, TITLE, TIME, DAYS_OF_WEEK FROM COURSE WHERE InstructorID = ?";
     sqlite3_stmt* stmt;
@@ -90,6 +100,8 @@ void INSTRUCTOR::printSchedule() {
 
     sqlite3_finalize(stmt);
 }
+
+//Search The Coarse Roster 
 
 void INSTRUCTOR::searchRoster() {
     std::string crn;
@@ -113,6 +125,8 @@ void INSTRUCTOR::searchRoster() {
 
     sqlite3_finalize(stmt);
 }
+
+//Print The Coarse Roaster 
 
 void INSTRUCTOR::printRoster() {
     std::string sql = "SELECT CRN FROM COURSE WHERE InstructorID = ?";
