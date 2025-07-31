@@ -1,0 +1,9 @@
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Login.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Login_autogen_timestamp_deps.dir
+C:/Users/Jospeh Andro/Documents/Login/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Login_autogen.dir
